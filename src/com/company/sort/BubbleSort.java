@@ -8,7 +8,6 @@ import java.util.Arrays;
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = {1, 4, 2, -1, 0, -3};
-        int[] a = null;
         System.out.println(Arrays.toString(arr));
         bubbleSort(arr);
         System.out.println(Arrays.toString(arr));
