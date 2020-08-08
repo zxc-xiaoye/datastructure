@@ -5,13 +5,13 @@ import java.util.Arrays;
 /**
  * 基数排序
  */
-public class RedixSort {
+public class RadixSort {
     public static void main(String[] args) {
         int[] arr = {354, 32, 24, 388, 9854, 5742};
-        redixSort(arr);
+        radixSort(arr);
         System.out.println(Arrays.toString(arr));
     }
-    public static void redixSort(int[] arr) {
+    public static void radixSort(int[] arr) {
         int[][] bucket = new int[10][arr.length];
         int[] bucketEleCounts = new int[10];
 
