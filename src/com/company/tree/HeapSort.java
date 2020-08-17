@@ -27,7 +27,7 @@ public class HeapSort {
             temp = arr[j];
             arr[j] = arr[0];
             arr[0] = temp;
-            adjustHeap(arr, 0, j-1);
+            adjustHeap(arr, 0, j - 1);
         }
     }
 
@@ -43,7 +43,7 @@ public class HeapSort {
         // k = i * 2 + 1  k为i的左结点
         for (int k = i * 2 + 1; k < length; k = k * 2 + 1) {
             // 判断左右结点大小
-            if(arr[k] < arr[k+1]) {
+            if(k + 1 <= length && arr[k] < arr[k+1]) {
                 k++;
             }
             // 判断父子结点大小
