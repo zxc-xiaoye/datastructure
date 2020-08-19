@@ -39,17 +39,25 @@ public class BinarySortTree {
                 // 删除有一个子结点的结点
                 if (targetNode.getLeft() != null ) {
                     // targetNode 有左子结点
-                    if (parent.getLeft() != null && parent.getLeft().getValue() == value) {
-                        parent.setLeft(targetNode.getLeft());
+                    if (parent != null) {
+                        if (parent.getLeft() != null && parent.getLeft().getValue() == value) {
+                            parent.setLeft(targetNode.getLeft());
+                        } else {
+                            parent.setRight(targetNode.getLeft());
+                        }
                     } else {
-                        parent.setRight(targetNode.getLeft());
+                        root = targetNode.getLeft();
                     }
                 } else {
                     // targetNode 有右子结点
-                    if (parent.getLeft() != null && parent.getLeft().getValue() == value) {
-                        parent.setLeft(targetNode.getRight());
+                    if (parent != null) {
+                        if (parent.getLeft() != null && parent.getLeft().getValue() == value) {
+                            parent.setLeft(targetNode.getRight());
+                        } else {
+                            parent.setRight(targetNode.getRight());
+                        }
                     } else {
-                        parent.setRight(targetNode.getRight());
+                        root = targetNode.getRight();
                     }
                 }
             }
